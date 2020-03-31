@@ -37,9 +37,9 @@ class Dialog extends ComponentDialog {
     async startStep(stepContext) {
         const activity = _.clone(_.get(stepContext, 'context._activity', {}));
         const from = _.get(activity, 'from', {});
-        from.channelId = _.get(activity, 'channelId');
-        // from.conversation = _.get(activity, 'conversation', {});
-        // from.recipient = _.get(activity, 'recipient', {});
+        from.channelId = activity.channelId;
+        // from.conversation = activity.conversation;
+        // from.recipient = activity.recipient;
         const status = utils.upsert(utils.db, 'users', { id: from.id }, from);
         let prompt = 'Choose';
         if (status === 'created') {
@@ -72,31 +72,34 @@ class Dialog extends ComponentDialog {
         return o;
     }
 
+    collectStats (stepContext, command) {
+        utils.db.get('stats')
+            .update('total', n => (n || 0) + 1)
+            .update(command, n => (n || 0) + 1)
+            .update('updatedAt', d => new Date())
+            .write();
+        const id = _.get(stepContext, 'context._activity.from.id', {});
+        utils.db.get('users').find({ id })
+            .update(`stats.${command}`, n => (n || 0) + 1)
+            .update('updatedAt', d => new Date())
+            .write();
+    }
+
+    async sendResponse(stepContext, data = [], joiner) {
+        const text = this.convertArrayToString(data, joiner);
+        return await stepContext.context.sendActivity(text);
+    }
+
 	async summaryStep(stepContext) {
         const command = _.get(stepContext, 'result.value');
-        if (command) {
-            utils.db.get('stats')
-                .update('total', n => (n || 0) + 1)
-                .update(command, n => (n || 0) + 1)
-                .update('updatedAt', d => new Date())
-                .write();
-            const id = _.get(stepContext, 'context._activity.from.id', {});
-            utils.db.get('users').find({ id })
-                .update(`stats.${command}`, n => (n || 0) + 1)
-                .update('updatedAt', d => new Date())
-                .write();
-        }
+        if (command) this.collectStats(stepContext, command);
         switch (command) {
             case 'ⓘ Info': {
-                const infoData = data.info || [];
-                const text = this.convertArrayToString(infoData);
-                await stepContext.context.sendActivity(text);
+                await this.sendResponse(stepContext, data.info);
                 break;
             }
             case '📞 Helpline': {
-                const helpLineData = data.helpLineNumbers || [];
-                const text = this.convertArrayToString(helpLineData);
-                await stepContext.context.sendActivity(text);
+                await this.sendResponse(stepContext, data.helpLineNumbers);
                 break;
             }
             case '📊 Stats': {
@@ -105,26 +108,21 @@ class Dialog extends ComponentDialog {
                 const statsIndiaGovtWeb = await utils.getIndiaStats();
                 const indiaData = (statsIndiaGovtWeb.length) ? statsIndiaGovtWeb : statsIndia;
                 const stats = [...statsWorld, ...indiaData, ...data.stats];
-                const text = this.convertArrayToString(stats);
-                await stepContext.context.sendActivity(text);
+                await this.sendResponse(stepContext, stats);
                 break;
             }
             case '🌐 News': {
                 const news = await utils.getNews('World');
-                const text = this.convertArrayToString(news.articles, process.env.JOINER);
-                await stepContext.context.sendActivity(text);
+                await this.sendResponse(stepContext, news.articles, process.env.JOINER);
                 break;
             }
             case '🇮🇳 News': {
                 const news = await utils.getNews('India');
-                const text = this.convertArrayToString(news.articles, process.env.JOINER);
-                await stepContext.context.sendActivity(text);
+                await this.sendResponse(stepContext, news.articles, process.env.JOINER);
                 break;
             }
             case '💻 Developer': {
-                const devData = data.dev || [];
-                const text = this.convertArrayToString(devData);
-                await stepContext.context.sendActivity(text);
+                await this.sendResponse(stepContext, data.dev);
                 break;
             }
             default: {
