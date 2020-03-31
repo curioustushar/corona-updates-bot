@@ -11,7 +11,7 @@ Get updates on Covid19 / coronavirus
 * <a href="https://join.skype.com/bot/591a3a86-a08a-4139-9c1f-71c958351812"> <img src="https://dev.botframework.com/client/images/channels/icons/skype.png" width="48" alt="Skype"></a>
 <img src="https://i.imgur.com/cApU2ex.gif" alt="Skype">
 
-
+* <a href="http://covid19-info.ml/"> <img src="https://dev.botframework.com/client/images/channels/icons/webchat.png" width="48" alt="Web"></a>
 
 ## Found this project useful?
 
