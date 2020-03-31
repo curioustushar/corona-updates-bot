@@ -1,0 +1,58 @@
+{
+  "name": "corona-updates-bot",
+  "version": "1.0.0",
+  "description": "Get updates on Covid19 / coronavirus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node.js",
+    "bot",
+    "botbuilder",
+    "botbuilder-dialogs",
+    "corona",
+    "corona bot",
+    "corona-virus",
+    "corona-virus bot",
+    "coronavirus",
+    "coronavirus bot",
+    "covid 19",
+    "covid 19 bot",
+    "Skype bot",
+    "Telegram bot",
+    "Line bot"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curioustushar/corona-updates-bot.git"
+  },
+  "author": "Tushar Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curioustushar/corona-updates-bot/issues"
+  },
+  "homepage": "https://github.com/curioustushar/corona-updates-bot#readme",
+  "dependencies": {
+    "botbuilder": "^4.8.0",
+    "botbuilder-dialogs": "^4.8.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "lowdb": "^1.0.0",
+    "moment": "^2.24.0",
+    "request-promise": "^4.2.5",
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "~1.19.4"
+  }
+}
