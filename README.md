@@ -1,17 +1,16 @@
+
 # Corona-updates-bot
 Get updates on Covid19 / coronavirus
 
 ## Bots
-* <a href="https://t.me/corona_india_info_bot"> <img src="https://dev.botframework.com/client/images/channels/icons/telegram.png" width="48" alt="Telegram"></a>
-<img src="https://i.imgur.com/cApU2ex.gif" alt="Line">
 
-* <a href="https://line.me/R/ti/p/%40399oobmw"> <img src="https://dev.botframework.com/client/images/channels/icons/line.png" width="48" alt="Line"></a>
-<img src="https://i.imgur.com/tN97ofM.gif" alt="Line">
+<a href="https://t.me/corona_india_info_bot"> <img src="https://dev.botframework.com/client/images/channels/icons/telegram.png" width="48" alt="Telegram"></a>  <a href="https://line.me/R/ti/p/%40399oobmw"> <img src="https://dev.botframework.com/client/images/channels/icons/line.png" width="48" alt="Line"></a> <a href="https://join.skype.com/bot/591a3a86-a08a-4139-9c1f-71c958351812">  <img src="https://dev.botframework.com/client/images/channels/icons/skype.png" width="48" alt="Skype"></a>  <a href="http://covid19-info.ml/"> <img src="https://dev.botframework.com/client/images/channels/icons/webchat.png" width="48" alt="Web"></a>
 
-* <a href="https://join.skype.com/bot/591a3a86-a08a-4139-9c1f-71c958351812"> <img src="https://dev.botframework.com/client/images/channels/icons/skype.png" width="48" alt="Skype"></a>
-<img src="https://i.imgur.com/cApU2ex.gif" alt="Skype">
 
-* <a href="http://covid19-info.ml/"> <img src="https://dev.botframework.com/client/images/channels/icons/webchat.png" width="48" alt="Web"></a>
+| Telegram | Line | Skype |
+| --- | -- | --- |
+|<img src="https://i.imgur.com/cApU2ex.gif" alt="Line"> | <img src="https://i.imgur.com/tN97ofM.gif" alt="Line"> | <img src="https://i.imgur.com/cApU2ex.gif" alt="Skype"> |
+
 
 ## Found this project useful?
 
@@ -51,4 +50,3 @@ Tushar Gupta | [@curioustushar](https://github.com/curioustushar)
 * [Linkedin](https://www.linkedin.com/in/curioustushar/)
 * [StackOverflow](https://stackoverflow.com/users/2224265/tushar-gupta-curioustushar)
 * [Twitter](https://twitter.com/curioustushar)
-    
