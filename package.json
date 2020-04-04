@@ -39,6 +39,7 @@
     "botbuilder": "^4.8.0",
     "botbuilder-dialogs": "^4.8.0",
     "cheerio": "^1.0.0-rc.3",
+    "console-stamp": "^0.2.9",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.15",
     "lowdb": "^1.0.0",

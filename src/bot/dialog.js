@@ -104,9 +104,9 @@ class Dialog extends ComponentDialog {
             }
             case '📊 Stats': {
                 const statsWorld = await utils.getStats('World');
-                const statsIndia = await utils.getStats('India', 'India');
-                const statsIndiaGovtWeb = await utils.getIndiaStats();
-                const indiaData = (statsIndiaGovtWeb.length) ? statsIndiaGovtWeb : statsIndia;
+                let indiaData = await utils.getIndiaStats();
+                if (!indiaData.length) indiaData = await utils.getIndiaStatsFromGovtWebsite();
+                if (!indiaData.length) indiaData = await utils.getStats('India', 'India');
                 const stats = [...statsWorld, ...indiaData, ...data.stats];
                 await this.sendResponse(stepContext, stats);
                 break;

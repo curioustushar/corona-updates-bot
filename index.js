@@ -1,3 +1,4 @@
+require('console-stamp')(console, { pattern: 'dd/mm/yyyy HH:MM:ss.l' });
 require('dotenv').config();
 const restify = require('restify');
 const {

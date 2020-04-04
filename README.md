@@ -9,7 +9,7 @@ Get updates on Covid19 / coronavirus
 
 | Telegram | Line | Skype |
 | --- | -- | --- |
-|<img src="https://i.imgur.com/cApU2ex.gif" alt="Line"> | <img src="https://i.imgur.com/tN97ofM.gif" alt="Line"> | <img src="https://i.imgur.com/cApU2ex.gif" alt="Skype"> |
+|<img src="https://i.imgur.com/cApU2ex.gif" alt="Telegram"> | <img src="https://i.imgur.com/tN97ofM.gif" alt="Line"> | <img src="https://i.imgur.com/RwCvHV3.gif" alt="Skype"> |
 
 
 ## Found this project useful?
@@ -40,6 +40,7 @@ If you found this project useful, then please consider giving it a ⭐️ on Git
     * [Genomic epidemiology of novel coronavirus](https://nextstrain.org/ncov?l=radial)
     * [Worldometers coronavirus](https://www.worldometers.info/coronavirus/)
     * [Covidvisualizer](https://www.covidvisualizer.com/)
+    * [COVID19-India](https://github.com/covid19india/api/)
 * News [NewsApi](https://newsapi.org/)
 
 ## Created & Maintained By
