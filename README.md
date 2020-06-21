@@ -4,7 +4,7 @@ Get updates on Covid19 / coronavirus
 
 ## Bots
 
-<a href="https://t.me/corona_india_info_bot"> <img src="https://dev.botframework.com/client/images/channels/icons/telegram.png" width="48" alt="Telegram"></a>  <a href="https://line.me/R/ti/p/%40399oobmw"> <img src="https://dev.botframework.com/client/images/channels/icons/line.png" width="48" alt="Line"></a> <a href="https://join.skype.com/bot/591a3a86-a08a-4139-9c1f-71c958351812">  <img src="https://dev.botframework.com/client/images/channels/icons/skype.png" width="48" alt="Skype"></a>  <a href="http://covid19-info.ml/"> <img src="https://dev.botframework.com/client/images/channels/icons/webchat.png" width="48" alt="Web"></a>
+<img src="https://dev.botframework.com/client/images/channels/icons/telegram.png" width="48" alt="Telegram"><img src="https://dev.botframework.com/client/images/channels/icons/line.png" width="48" alt="Line"><img src="https://dev.botframework.com/client/images/channels/icons/skype.png" width="48" alt="Skype"><img src="https://dev.botframework.com/client/images/channels/icons/webchat.png" width="48" alt="Web">
 
 
 | Telegram | Line | Skype |
