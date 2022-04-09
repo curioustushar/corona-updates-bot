@@ -43,7 +43,7 @@
     "dotenv": "^8.2.0",
     "lodash": "^4.17.19",
     "lowdb": "^1.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "request-promise": "^4.2.5",
     "restify": "^8.5.1"
   },
